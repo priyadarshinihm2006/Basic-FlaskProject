@@ -27,6 +27,7 @@ This will create a `wroom.db` file using the schema defined in `create_db.sql`.
 
 ---
 
+
 ## 🚀 Running the Application
 
 To start the Flask application, simply run:
@@ -35,7 +36,14 @@ To start the Flask application, simply run:
 python3 run.py
 ```
 
-Then navigate to `http://localhost:5000` in your browser.
+if it says flask not found or installed, use the below command to install it
+
+```bash
+pip3 install flask
+```
+
+
+Then navigate to `http://localhost:8080` in your browser.
 
 ---
 
