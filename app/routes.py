@@ -128,4 +128,27 @@ def init_routes(app):
         car['image'] = '../static/img/car_automobile_' + image + '.svg'
         return render_template('car_details.html', car=dict(car))
 
+    @app.route('/api/add', methods=['POST'])
+    def add_numbers():
+        data = request.json
+
+        num1 = data.get('num1')
+        num2 = data.get('num2')
+
+        try:
+            result = float(num1) + float(num2)
+
+            return jsonify({
+                'success': True,
+                'num1': num1,
+                'num2': num2,
+                'result': result
+            }), 200
+
+        except Exception as e:
+            return jsonify({
+                'success': False,
+                'message': str(e)
+            }), 400
+
 
